@@ -1,0 +1,190 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.9, pytest-7.4.3, pluggy-1.5.0 -- C:\Users\camer\Desktop\DAOC AHK\EdenSeason3\NewSprint1\test_env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\camer\Desktop\DAOC AHK\EdenSeason3\NewSprint1
+plugins: cov-4.1.0
+collecting ... collected 8 items
+
+test_suite.py::DAOCSprintManagerTests::test_01_installation_structure PASSED [ 12%]
+test_suite.py::DAOCSprintManagerTests::test_02_configuration_files PASSED [ 25%]
+test_suite.py::DAOCSprintManagerTests::test_03_template_files PASSED     [ 37%]
+test_suite.py::DAOCSprintManagerTests::test_04_executable_presence PASSED [ 50%]
+test_suite.py::DAOCSprintManagerTests::test_05_profile_management PASSED [ 62%]
+test_suite.py::DAOCSprintManagerTests::test_06_settings_validation PASSED [ 75%]
+test_suite.py::DAOCSprintManagerTests::test_07_resource_paths PASSED     [ 87%]
+test_suite.py::DAOCSprintManagerTests::test_08_performance_monitor FAILED [100%]C:\Users\camer\Desktop\DAOC AHK\EdenSeason3\NewSprint1\test_env\Lib\site-packages\coverage\inorout.py:509: CoverageWarning: Module src.daoc_sprint_manager was never imported. (module-not-imported)
+  self.warn(f"Module {pkg} was never imported.", slug="module-not-imported")
+
+
+================================== FAILURES ===================================
+_____________ DAOCSprintManagerTests.test_08_performance_monitor ______________
+
+self = <test_suite.DAOCSprintManagerTests testMethod=test_08_performance_monitor>
+
+    def test_08_performance_monitor(self):
+        """Test performance monitor functionality"""
+        # Create a test directory for performance logs
+        test_output_dir = "test_environment/test_results/performance_logs"
+        os.makedirs(test_output_dir, exist_ok=True)
+    
+        # Test 1: Basic monitoring functionality
+        monitor = PerformanceMonitor(app_name="python", output_dir=test_output_dir)
+        monitor.start_monitoring(duration=2, interval=0.5)
+    
+        # Generate and verify summary
+        summary = monitor.generate_summary()
+    
+        # Verify summary contains expected keys
+        expected_keys = ["duration_seconds", "cpu_avg", "cpu_max", "memory_avg_mb", "memory_max_mb", "num_samples"]
+        for key in expected_keys:
+            self.assertIn(key, summary, f"Summary missing key: {key}")
+    
+        # Verify metrics were collected
+        self.assertGreater(len(monitor.metrics), 0, "No metrics were collected")
+    
+        # Verify metric structure
+        first_metric = monitor.metrics[0]
+        self.assertIn("timestamp", first_metric)
+        self.assertIn("cpu_percent", first_metric)
+        self.assertIn("memory_rss", first_metric)
+    
+        # Verify values are within expected ranges
+        self.assertGreaterEqual(first_metric["cpu_percent"], 0)
+        self.assertLessEqual(first_metric["cpu_percent"], 100)
+        self.assertGreater(first_metric["memory_rss"], 0)
+    
+        # Test 2: Non-existent process monitoring
+        monitor_nonexistent = PerformanceMonitor(app_name="nonexistent_app", output_dir=test_output_dir)
+        monitor_nonexistent.start_monitoring(duration=1, interval=0.5)
+    
+        # Verify empty metrics for non-existent process
+        summary_nonexistent = monitor_nonexistent.generate_summary()
+        self.assertEqual(summary_nonexistent["num_samples"], 0)
+        self.assertEqual(summary_nonexistent["cpu_avg"], 0)
+    
+        # Test 3: Invalid timestamps handling
+        monitor_invalid = PerformanceMonitor(app_name="python", output_dir=test_output_dir)
+        monitor_invalid.metrics = [
+            {"timestamp": "invalid_time", "cpu_percent": 50},
+            {"timestamp": "2024-01-01T00:00:00", "cpu_percent": 60}
+        ]
+        summary_invalid = monitor_invalid.generate_summary()
+        self.assertEqual(summary_invalid["duration_seconds"], 0)
+    
+        # Test 4: Save metrics functionality
+        monitor = PerformanceMonitor(app_name="python", output_dir=test_output_dir)
+        monitor.metrics = [
+            {
+                "timestamp": "2024-01-01T00:00:00",
+                "cpu_percent": 50,
+                "memory_rss": 1000
+            }
+        ]
+        monitor.save_metrics()
+    
+        # Verify metrics file was created and contains valid JSON
+        metrics_files = [f for f in os.listdir(test_output_dir) if f.startswith("performance_metrics_")]
+        self.assertGreater(len(metrics_files), 0)
+    
+        latest_metrics_file = sorted(metrics_files)[-1]
+        with open(os.path.join(test_output_dir, latest_metrics_file)) as f:
+            saved_data = json.load(f)
+            self.assertEqual(saved_data["app_name"], "python")
+            self.assertEqual(len(saved_data["metrics"]), 1)
+    
+        # Test 5: Empty metrics handling
+        empty_monitor = PerformanceMonitor(app_name="python", output_dir=test_output_dir)
+        empty_monitor.save_metrics()  # Should not create a file
+        empty_summary = empty_monitor.generate_summary()
+        self.assertEqual(empty_summary["num_samples"], 0)
+    
+        # Test 6: Output directory error handling
+        with tempfile.NamedTemporaryFile() as tmp_file:
+            # Try to create monitor with a file path as output directory
+            monitor_bad_dir = PerformanceMonitor(app_name="python", output_dir=tmp_file.name)
+            self.assertIsNotNone(monitor_bad_dir)  # Should handle error gracefully
+    
+        # Test with non-existent parent directory
+        bad_dir = "/nonexistent/path/performance_logs"
+        monitor_nonexistent_dir = PerformanceMonitor(app_name="python", output_dir=bad_dir)
+        self.assertIsNotNone(monitor_nonexistent_dir)  # Should handle error gracefully
+    
+        # Test 7: Process access error handling
+        def mock_process_error(*args, **kwargs):
+            raise psutil.AccessDenied()
+    
+        original_process_iter = psutil.process_iter
+        psutil.process_iter = mock_process_error
+    
+        try:
+            monitor_access_error = PerformanceMonitor(app_name="python", output_dir=test_output_dir)
+            proc = monitor_access_error.find_process()
+            self.assertIsNone(proc)  # Should return None when access is denied
+    
+            # Test monitoring with access denied
+            monitor_access_error.start_monitoring(duration=1, interval=0.5)
+            self.assertEqual(len(monitor_access_error.metrics), 0)  # No metrics should be collected
+    
+            summary = monitor_access_error.generate_summary()
+            self.assertEqual(summary["num_samples"], 0)  # Summary should show no samples
+        finally:
+            psutil.process_iter = original_process_iter  # Restore original function
+    
+        # Test 8: Main function coverage
+        import sys
+        original_argv = sys.argv.copy()
+    
+        try:
+            # Test with valid arguments
+            sys.argv = ['performance_monitor.py', '--app', 'python', '--duration', '1', '--interval', '0.5', '--output', test_output_dir]
+            from performance_monitor import main
+            main()
+    
+            # Verify metrics file was created
+            metrics_files = [f for f in os.listdir(test_output_dir) if f.startswith('performance_metrics_')]
+            self.assertGreater(len(metrics_files), 0)
+    
+            # Test with invalid arguments
+            sys.argv = ['performance_monitor.py']  # Missing required arguments
+>           with self.assertRaises(SystemExit):
+E           AssertionError: SystemExit not raised
+
+test_suite.py:210: AssertionError
+---------------------------- Captured stdout call -----------------------------
+Starting performance monitoring...
+Press Ctrl+C to stop
+
+No metrics collected. Make sure the application is running.
+Starting performance monitoring...
+Press Ctrl+C to stop
+
+No metrics collected. Make sure the application is running.
+------------------------------ Captured log call ------------------------------
+ERROR    root:performance_monitor.py:91 Could not find process: nonexistent_app
+ERROR    root:performance_monitor.py:144 Error parsing timestamps: Invalid isoformat string: 'invalid_time'
+ERROR    root:performance_monitor.py:49 Error finding process: 
+ERROR    root:performance_monitor.py:49 Error finding process: 
+ERROR    root:performance_monitor.py:91 Could not find process: python
+ERROR    root:performance_monitor.py:91 Could not find process: SprintToggle
+ERROR    root:performance_monitor.py:91 Could not find process: SprintToggle
+============================== warnings summary ===============================
+testing\test_environment_setup.py:6
+  C:\Users\camer\Desktop\DAOC AHK\EdenSeason3\NewSprint1\testing\test_environment_setup.py:6: PytestCollectionWarning: cannot collect test class 'TestEnvironmentSetup' because it has a __init__ constructor (from: test_suite.py)
+    class TestEnvironmentSetup:
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------- coverage: platform win32, python 3.12.9-final-0 -----------
+Name                             Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------
+testing\performance_monitor.py     104     16     20      4    84%   31, 76-78, 99->103, 104-105, 136-137, 204-205, 209-214
+----------------------------------------------------------------------------
+TOTAL                              104     16     20      4    84%
+Coverage HTML written to dir test_environment/test_results/reports/html
+Coverage XML written to file test_environment/test_results/reports/coverage.xml
+Coverage JSON written to file test_environment/test_results/reports/coverage.json
+
+Required test coverage of 80.0% reached. Total coverage: 83.87%
+=========================== short test summary info ===========================
+FAILED test_suite.py::DAOCSprintManagerTests::test_08_performance_monitor - A...
+=================== 1 failed, 7 passed, 1 warning in 2.88s ====================

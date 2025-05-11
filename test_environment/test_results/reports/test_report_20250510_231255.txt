@@ -1,0 +1,47 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.9, pytest-7.4.3, pluggy-1.5.0 -- C:\Users\camer\Miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\camer\Desktop\DAOC AHK\EdenSeason3\NewSprint1
+plugins: anyio-4.9.0, cov-4.1.0
+collecting ... collected 7 items
+
+test_suite.py::DAOCSprintManagerTests::test_01_installation_structure PASSED [ 14%]
+test_suite.py::DAOCSprintManagerTests::test_02_configuration_files PASSED [ 28%]
+test_suite.py::DAOCSprintManagerTests::test_03_template_files PASSED     [ 42%]
+test_suite.py::DAOCSprintManagerTests::test_04_executable_presence FAILED [ 57%]
+test_suite.py::DAOCSprintManagerTests::test_05_profile_management PASSED [ 71%]
+test_suite.py::DAOCSprintManagerTests::test_06_settings_validation PASSED [ 85%]
+test_suite.py::DAOCSprintManagerTests::test_07_resource_paths PASSED     [100%]C:\Users\camer\Miniconda3\Lib\site-packages\coverage\control.py:915: CoverageWarning: No data was collected. (no-data-collected)
+  self._warn("No data was collected.", slug="no-data-collected")
+C:\Users\camer\Miniconda3\Lib\site-packages\pytest_cov\plugin.py:312: CovReportWarning: Failed to generate report: No data to report.
+
+  warnings.warn(CovReportWarning(message))
+WARNING: Failed to generate report: No data to report.
+
+
+
+================================== FAILURES ===================================
+_____________ DAOCSprintManagerTests.test_04_executable_presence ______________
+
+self = <test_suite.DAOCSprintManagerTests testMethod=test_04_executable_presence>
+
+    def test_04_executable_presence(self):
+        """Test presence of main executable"""
+        exe_name = "DAOC Sprint Manager.exe"
+        exe_path = Path("../") / exe_name
+>       self.assertTrue(exe_path.exists(), f"Main executable missing: {exe_name}")
+E       AssertionError: False is not true : Main executable missing: DAOC Sprint Manager.exe
+
+test_suite.py:63: AssertionError
+============================== warnings summary ===============================
+test_environment_setup.py:6
+  C:\Users\camer\Desktop\DAOC AHK\EdenSeason3\NewSprint1\test_environment_setup.py:6: PytestCollectionWarning: cannot collect test class 'TestEnvironmentSetup' because it has a __init__ constructor (from: test_suite.py)
+    class TestEnvironmentSetup:
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------- coverage: platform win32, python 3.12.9-final-0 -----------
+
+=========================== short test summary info ===========================
+FAILED test_suite.py::DAOCSprintManagerTests::test_04_executable_presence - A...
+=================== 1 failed, 6 passed, 1 warning in 0.34s ====================

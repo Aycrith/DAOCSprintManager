@@ -1,0 +1,32 @@
+{
+  "log_level": "INFO",
+  "log_file_name": "daoc_sprint_manager.log",
+  "game_window_title": "Dark Age of Camelot",
+  "roi_x": 0,
+  "roi_y": 0,
+  "roi_width": 100,
+  "roi_height": 100,
+  "sprint_on_icon_path": "data/icon_templates/sprint_on.png",
+  "sprint_off_icon_path": "data/icon_templates/sprint_off.png",
+  "template_match_threshold": 0.8,
+  "detection_failure_threshold": 0.5,
+  "capture_fps": 10.0,
+  "temporal_consistency_frames": 3,
+  "sprint_key": "z",
+  "input_delay_ms": 50,
+  "show_performance_metrics": true,
+  "enable_detection_cache": true,
+  "detection_cache_size": 50,
+  "detection_cache_ttl_s": 0.5,
+  "app_icon_path": "data/app_icon.png",
+  "detection_method": "template",
+  "ml_model_path": "data/models/sprint_classifier.onnx",
+  "ml_input_size_wh": [
+    32,
+    32
+  ],
+  "ml_confidence_threshold": 0.7,
+  "save_problematic_frames": false,
+  "problematic_frame_save_path": "data/problem_frames",
+  "active_profile_id": null
+}

@@ -1,0 +1,28 @@
+{
+    "window": {
+        "title": "Dark Age of Camelot",
+        "roi": {
+            "x": 100,
+            "y": 100,
+            "width": 50,
+            "height": 50
+        }
+    },
+    "detection": {
+        "method": "template",
+        "confidence_threshold": 0.8,
+        "temporal_consistency": 3
+    },
+    "input": {
+        "sprint_key": "num1",
+        "safety_delay": 0.1
+    },
+    "performance": {
+        "target_fps": 30,
+        "adaptive_polling": true
+    },
+    "profiles": {
+        "active_profile": "default",
+        "auto_switch": false
+    }
+}

@@ -1,0 +1,29 @@
+include LICENSE
+include README.md
+include requirements.txt
+
+# Configuration templates
+recursive-include src/daoc_sprint_manager/config *.template
+
+# Application data files
+recursive-include src/daoc_sprint_manager/data *.png
+recursive-include src/daoc_sprint_manager/data/models *.onnx
+
+# Documentation
+recursive-include docs *.md
+recursive-include docs *.rst
+
+# Exclude development and test files
+global-exclude *.py[cod]
+global-exclude __pycache__
+global-exclude *.so
+global-exclude .git*
+global-exclude .pytest_cache
+global-exclude *.egg-info
+global-exclude *.egg
+global-exclude .coverage
+global-exclude htmlcov/
+global-exclude .tox/
+global-exclude .env
+global-exclude venv/
+global-exclude ENV/ 

@@ -1,0 +1,35 @@
+{
+    "window": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "roi": {
+            "type": "object",
+            "properties": {
+                "x": {
+                    "type": "integer",
+                    "min": 0
+                },
+                "y": {
+                    "type": "integer",
+                    "min": 0
+                },
+                "width": {
+                    "type": "integer",
+                    "min": 1
+                },
+                "height": {
+                    "type": "integer",
+                    "min": 1
+                }
+            },
+            "required": [
+                "x",
+                "y",
+                "width",
+                "height"
+            ]
+        }
+    }
+}

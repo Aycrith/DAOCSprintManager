@@ -1,0 +1,21 @@
+{
+  "game_window_title": "MOCK_GAME_BASELINE",
+  "roi_x": 200,
+  "roi_y": 200,
+  "roi_width": 100,
+  "roi_height": 100,
+  "sprint_on_icon_path": "data/icon_templates/sprint_on.png",
+  "sprint_off_icon_path": "data/icon_templates/sprint_off.png",
+  "template_match_threshold": 0.8,
+  "temporal_consistency_frames": 3,
+  "sprint_key": "z",
+  "capture_fps": 30.0,
+  "game_not_found_retry_delay_s": 2.0,
+  "capture_error_retry_delay_s": 1.0,
+  "show_performance_metrics": true,
+  "log_level": "DEBUG",
+  "log_file_name": "daoc_sprint_manager_test.log",
+  "app_icon_path": "data/app_icon.png",
+  "detection_method": "template",
+  "test_mode": true
+} 

@@ -1,0 +1,113 @@
+[
+    {
+        "name": "Test Profile 1",
+        "window_pattern": {
+            "title": "Eden - Character Name",
+            "class": "DAoCMWC"
+        },
+        "roi_config": {
+            "x": 249,
+            "y": 139,
+            "width": 97,
+            "height": 99
+        },
+        "enabled": false,
+        "auto_switch": false,
+        "priority": 4
+    },
+    {
+        "name": "Test Profile 2",
+        "window_pattern": {
+            "title": "Character Name - Dark Age of Camelot",
+            "class": "DAoCMWC"
+        },
+        "roi_config": {
+            "x": 148,
+            "y": 266,
+            "width": 75,
+            "height": 83
+        },
+        "enabled": true,
+        "auto_switch": false,
+        "priority": 2
+    },
+    {
+        "name": "Test Profile 3",
+        "window_pattern": {
+            "title": "Dark Age of Camelot",
+            "class": "DAoCMWC"
+        },
+        "roi_config": {
+            "x": 344,
+            "y": 212,
+            "width": 88,
+            "height": 68
+        },
+        "enabled": false,
+        "auto_switch": true,
+        "priority": 3
+    },
+    {
+        "name": "Test Profile 4",
+        "window_pattern": {
+            "title": "Eden - Character Name",
+            "class": "DAoCMWC"
+        },
+        "roi_config": {
+            "x": 307,
+            "y": 120,
+            "width": 62,
+            "height": 79
+        },
+        "enabled": false,
+        "auto_switch": true,
+        "priority": 4
+    },
+    {
+        "name": "Test Profile 5",
+        "window_pattern": {
+            "title": "Eden - Character Name",
+            "class": "DAoCMWC"
+        },
+        "roi_config": {
+            "x": 335,
+            "y": 134,
+            "width": 96,
+            "height": 82
+        },
+        "enabled": true,
+        "auto_switch": true,
+        "priority": 4
+    },
+    {
+        "name": "Invalid Profile 1",
+        "window_pattern": {
+            "title": "Dark Age of Camelot"
+        },
+        "roi_config": {
+            "x": 162,
+            "y": 120,
+            "width": 97,
+            "height": 77
+        },
+        "enabled": true,
+        "auto_switch": false,
+        "priority": 5
+    },
+    {
+        "name": "Invalid Profile 2",
+        "window_pattern": {
+            "title": "Eden - Character Name",
+            "class": "DAoCMWC"
+        },
+        "roi_config": {
+            "x": 496,
+            "y": 285,
+            "width": 80,
+            "height": 63
+        },
+        "enabled": false,
+        "auto_switch": false,
+        "priority": 5
+    }
+]

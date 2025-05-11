@@ -1,0 +1,11 @@
+{
+    "name": "Default Profile",
+    "window_title": "Dark Age of Camelot",
+    "roi": {
+        "x": 100,
+        "y": 100,
+        "width": 50,
+        "height": 50
+    },
+    "sprint_key": "num1"
+}

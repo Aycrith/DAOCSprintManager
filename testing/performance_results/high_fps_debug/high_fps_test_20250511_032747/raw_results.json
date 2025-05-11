@@ -1,0 +1,252 @@
+{
+  "time_series": [
+    {
+      "timestamp": "2025-05-11T03:27:49.150629",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:50.163456",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:51.176046",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:52.188950",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:53.202496",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:54.215238",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:55.228385",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:56.241571",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:57.254367",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:58.267566",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:27:59.279408",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:00.291302",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:01.304261",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:02.317136",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:03.329758",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:04.342549",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:05.355856",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:06.368913",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:07.385346",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:08.397584",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:09.410657",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:10.423019",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:11.434788",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:12.446153",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:13.457523",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:14.468807",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:15.480304",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:16.492087",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.484375,
+      "memory_vms": 0.9140625,
+      "num_threads": 4,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:17.503493",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.44921875,
+      "memory_vms": 0.83984375,
+      "num_threads": 1,
+      "num_handles": 57
+    },
+    {
+      "timestamp": "2025-05-11T03:28:18.514942",
+      "cpu_percent": 0.0,
+      "memory_rss": 3.44921875,
+      "memory_vms": 0.83984375,
+      "num_threads": 1,
+      "num_handles": 57
+    }
+  ],
+  "summary": {
+    "duration_seconds": 29.364313,
+    "cpu_avg": 0.0,
+    "cpu_max": 0.0,
+    "memory_avg_mb": 3.48203125,
+    "memory_max_mb": 3.484375,
+    "num_samples": 30
+  }
+}

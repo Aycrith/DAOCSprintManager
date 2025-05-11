@@ -1,0 +1,37 @@
+PERFORMANCE TEST SUMMARY REPORT
+================================================================================
+Report generated: 2025-05-11 03:29:33
+Number of test results: 3
+
+TEST TYPE: high_fps_test
+--------------------------------------------------------------------------------
+Number of test runs: 1
+Latest run: 20250511_032747
+  Duration: 29.36 seconds
+  CPU Average: 0.00%
+  CPU Maximum: 0.00%
+  Memory Average: 3.48 MB
+  Memory Maximum: 3.48 MB
+  Number of samples: 30
+
+TEST TYPE: long_duration_test
+--------------------------------------------------------------------------------
+Number of test runs: 1
+Latest run: 20250511_032620
+  Duration: 59.72 seconds
+  CPU Average: 0.00%
+  CPU Maximum: 0.00%
+  Memory Average: 3.52 MB
+  Memory Maximum: 3.53 MB
+  Number of samples: 60
+
+TEST TYPE: baseline_test
+--------------------------------------------------------------------------------
+Number of test runs: 1
+Latest run: 20250511_032514
+  Duration: 9.13 seconds
+  CPU Average: 0.00%
+  CPU Maximum: 0.00%
+  Memory Average: 3.48 MB
+  Memory Maximum: 3.48 MB
+  Number of samples: 10

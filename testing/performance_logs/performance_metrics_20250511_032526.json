@@ -1,0 +1,87 @@
+{
+    "process_id": 1796,
+    "start_time": "2025-05-11T03:25:16.635688",
+    "end_time": "2025-05-11T03:25:25.762152",
+    "metrics": [
+        {
+            "timestamp": "2025-05-11T03:25:16.635688",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:17.653363",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:18.668750",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:19.681186",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:20.693294",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:21.705644",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:22.721709",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:23.734720",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:24.746522",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        },
+        {
+            "timestamp": "2025-05-11T03:25:25.762152",
+            "cpu_percent": 0.0,
+            "memory_rss": 3.484375,
+            "memory_vms": 0.9140625,
+            "num_threads": 4,
+            "num_handles": 57
+        }
+    ]
+}

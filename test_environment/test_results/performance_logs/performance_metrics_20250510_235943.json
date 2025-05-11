@@ -1,0 +1,39 @@
+{
+    "app_name": "python",
+    "start_time": "2025-05-10T23:59:41.625593",
+    "end_time": "2025-05-10T23:59:43.137165",
+    "metrics": [
+        {
+            "timestamp": "2025-05-10T23:59:41.625593",
+            "cpu_percent": 0.0,
+            "memory_rss": 30.78125,
+            "memory_vms": 20.51171875,
+            "num_threads": 1,
+            "num_handles": 182
+        },
+        {
+            "timestamp": "2025-05-10T23:59:42.129968",
+            "cpu_percent": 0.0,
+            "memory_rss": 30.78125,
+            "memory_vms": 20.51171875,
+            "num_threads": 1,
+            "num_handles": 182
+        },
+        {
+            "timestamp": "2025-05-10T23:59:42.633597",
+            "cpu_percent": 0.0,
+            "memory_rss": 30.78125,
+            "memory_vms": 20.51171875,
+            "num_threads": 1,
+            "num_handles": 182
+        },
+        {
+            "timestamp": "2025-05-10T23:59:43.137165",
+            "cpu_percent": 0.0,
+            "memory_rss": 30.78125,
+            "memory_vms": 20.51171875,
+            "num_threads": 1,
+            "num_handles": 182
+        }
+    ]
+}

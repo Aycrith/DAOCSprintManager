@@ -1,0 +1,12 @@
+{
+    "app_name": "python",
+    "start_time": "2024-01-01T00:00:00",
+    "end_time": "2024-01-01T00:00:00",
+    "metrics": [
+        {
+            "timestamp": "2024-01-01T00:00:00",
+            "cpu_percent": 50,
+            "memory_rss": 1000
+        }
+    ]
+}

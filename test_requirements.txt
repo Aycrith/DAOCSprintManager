@@ -1,0 +1,10 @@
+pytest==7.4.3
+pytest-cov==4.1.0
+pillow>=11.2.0
+numpy<2.0.0
+opencv-python-headless==4.8.1.78
+pygetwindow==0.0.9
+pydirectinput==1.0.4
+pystray>=0.19.4
+psutil>=5.9.0
+--find-links https://download.pytorch.org/whl/torch_stable.html 

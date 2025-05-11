@@ -1,0 +1,50 @@
+[run]
+# Measure branch coverage in addition to statement coverage
+branch = True
+
+# Source to measure
+source = 
+    src/daoc_sprint_manager
+    testing
+
+# Patterns to exclude from coverage
+omit =
+    */test_*.py
+    */conftest.py
+    */__init__.py
+    */setup.py
+
+[report]
+# Show line numbers of statements that weren't executed
+show_missing = True
+
+# Don't report files with 100% coverage
+skip_covered = True
+
+# Exclude lines from coverage
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    pass
+    raise AssertionError
+    raise NotImplementedError
+    if False:
+    if typing.TYPE_CHECKING:
+    class .*\bProtocol\):
+
+# Fail if coverage is below 80%
+fail_under = 80.0
+
+[html]
+# Directory for HTML report
+directory = test_environment/test_results/reports/html
+
+[xml]
+# Output file for XML report
+output = test_environment/test_results/reports/coverage.xml
+
+[json]
+# Output file for JSON report
+output = test_environment/test_results/reports/coverage.json 
