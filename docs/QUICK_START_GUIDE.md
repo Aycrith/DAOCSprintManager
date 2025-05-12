@@ -20,6 +20,7 @@ Get DAOC Sprint Manager up and running in minutes!
 1. **Launch the Application**
    - The system tray icon will appear
    - Right-click the icon for the menu
+   - Note: You can enable "Start Minimized to Tray" in settings for future launches
 
 2. **Open Configuration**
    - Select "Configure" from the tray menu
@@ -33,7 +34,16 @@ Get DAOC Sprint Manager up and running in minutes!
      2. Use the selection tool to draw around your sprint icon
      3. Click "Save ROI"
 
-4. **Detection Method**
+4. **UI Behavior Settings**
+   - In the Configuration window, navigate to the Advanced tab
+   - Configure UI behavior preferences:
+     - "Start Minimized to Tray" - Application starts silently in tray
+     - "Minimize GUI to Tray" - Windows minimize to tray instead of closing
+   - Configure update behavior:
+     - "Enable Background Update Check" - Periodically check for updates
+     - "Update Check Interval" - Hours between automatic checks
+
+5. **Detection Method**
    - Template Matching (Default, Recommended)
      - Works out of the box
      - CPU efficient
@@ -56,14 +66,61 @@ Get DAOC Sprint Manager up and running in minutes!
 3. Status will show "Running"
 4. Sprint icon will be detected automatically
 
-## 5. Verify Operation
+## 5. Additional Features
+
+1. **Performance Statistics**
+   - Right-click tray icon → "View Performance Stats"
+   - Monitor real-time application performance:
+     - CPU and memory usage
+     - Frame processing time
+     - Detection success rate
+   - Reset session statistics with the "Reset" button
+
+2. **Automatic Updates** (New in v0.4.0)
+   - DAOC Sprint Manager now features a secure automatic update system:
+     1. **Update Detection**:
+        - The application checks for updates in the background at your configured interval
+        - You can also manually check via the system tray menu -> "Check for Updates"
+        - When a new version is detected, you'll receive a system tray notification
+     
+     2. **Update Options**:
+        - **Update Now**: Immediately download and apply the update
+        - **Remind Me Later**: Postpone the update until next application launch
+        - After multiple deferrals, the notification will become more prominent
+     
+     3. **Download & Installation Process**:
+        - The update package is downloaded with a progress indicator
+        - SHA256 checksum verification ensures update integrity
+        - If verification succeeds, the application:
+          - Creates a backup of your current installation
+          - Applies the update using a batch script
+          - Automatically restarts with the new version
+     
+     4. **Failure Handling**:
+        - If download fails: Error notification appears, current version continues running
+        - If checksum verification fails: Update is rejected, current version continues running
+        - If installation fails: Automatic rollback to previous version
+     
+     5. **Configuration Options**:
+        - Open Configuration GUI -> Advanced tab
+        - Enable/disable background update checks
+        - Set check interval (hours)
+        - View last check timestamp and result
+
+3. **Diagnostic Reporting**
+   - If you encounter issues, generate a diagnostic report:
+     - Right-click tray icon → "Export Diagnostic Report"
+     - Choose save location for the ZIP file
+     - Submit with any bug reports for faster troubleshooting
+
+## 6. Verify Operation
 
 1. Enter combat in DAOC
 2. Sprint icon should appear
 3. Sprint will activate automatically
 4. Check system tray icon for status
 
-## 6. Troubleshooting
+## 7. Troubleshooting
 
 ### Common Issues
 
@@ -80,12 +137,21 @@ Get DAOC Sprint Manager up and running in minutes!
    - Lower capture FPS in settings
    - Reduce ROI size
    - Close unnecessary background applications
+   - Check Performance Stats window for metrics
 
-### Logs Location
+### Diagnostic Tools
+- Export a diagnostic report for troubleshooting: right-click tray icon → "Export Diagnostic Report"
 - Logs are in `%APPDATA%/DAOCSprintManager/logs/`
 - Check `sprint_manager.log` for details
 
-## 7. Next Steps
+### Update Issues
+- **Connection Problems**: Ensure you have internet connectivity for update checks
+- **Download Failures**: Check your firewall settings or try manually downloading from GitHub
+- **Checksum Errors**: This indicates a corrupted download - try checking for updates again
+- **Installation Errors**: Check logs for details; the application automatically restores from backup
+- **Manual Alternative**: You can always download and install updates manually from our GitHub releases page
+
+## 8. Next Steps
 
 1. **Fine-tune Settings**
    - Adjust detection sensitivity

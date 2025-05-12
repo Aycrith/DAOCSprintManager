@@ -4,11 +4,14 @@ A Python-based utility to automatically manage sprint toggling in Dark Age of Ca
 
 ## Features
 
-- Automated sprint detection and activation
-- Configurable detection methods (template matching or ML-based)
-- Profile management system
-- System tray interface
-- Customizable settings via GUI
+- Automated sprint detection using template matching and ML methods
+- System tray interface for easy access and control
+- Performance monitoring and statistics display
+- Diagnostic report generation
+- Multiple profile support with auto-switching
+- Automatic updates with secure download and installation
+- Customizable detection settings and regions
+- Comprehensive logging and error handling
 
 ## Requirements
 
@@ -24,13 +27,67 @@ A Python-based utility to automatically manage sprint toggling in Dark Age of Ca
 
 ## Usage
 
-... (usage steps) ...
+1.  Launch the application (`DAOC Sprint Manager.exe` or `python -m src.daoc_sprint_manager.main`).
+2.  The application icon will appear in your system tray.
+3.  **Right-click** the tray icon for options:
+    *   **Pause/Resume**: Toggle the sprint detection and automation.
+    *   **Open Configuration**: Open the settings editor (Config GUI or `settings.json`).
+    *   **View Performance Stats**: Open the performance statistics window to monitor CPU usage, memory consumption, frame processing time, and other metrics. You can also reset session statistics from this window.
+    *   **Export Diagnostic Report**: Generate and save a comprehensive diagnostic ZIP file containing system information, logs, and settings for troubleshooting help.
+    *   **Check for Updates**: Manually check if a new version of the application is available. The app also checks periodically in the background based on your settings.
+    *   **Profiles**: Select or manage character/game profiles.
+    *   **Exit**: Close the application.
+
+## Automatic Updates
+
+Starting with version 0.4.0, DAOC Sprint Manager includes an automatic update system:
+
+- **Background Checks**: The application periodically checks for updates based on your configured interval
+- **Update Notifications**: When a new version is available, you'll receive a system tray notification
+- **Secure Downloads**: All updates are securely downloaded and verified with SHA256 checksums
+- **Seamless Installation**: Updates are automatically applied with minimal disruption
+- **User Control**: Choose "Update Now" or "Remind Me Later" when prompted
+- **Manual Checks**: You can always manually check for updates via the system tray menu
+
+If an update fails due to network issues or verification problems, the application will continue running on the current version without disruption. You can retry the update at any time.
+
+## Customization Options
+
+The DAOC Sprint Manager offers several customization options in the Configuration GUI:
+
+- **Start Minimized to Tray**: When enabled, the application starts directly in the system tray without showing any window, useful for autostart configurations.
+- **Minimize GUI to Tray**: When enabled, GUI windows (Configuration, Profiles, Performance Stats) minimize to the tray instead of closing when you click the X button.
+- **Background Update Checking**: Configure automatic checking for updates at a specified interval (hours).
+- **Theme Settings**: (if available)
+- **Profile-specific settings**: Configure different behaviors for different game characters.
 
 ## Troubleshooting
 
-... (troubleshooting) ...
+If you encounter issues with the application:
+
+1. Check the application logs in the logs directory
+2. Use the "Export Diagnostic Report" option from the tray menu to generate a comprehensive troubleshooting package
+3. Review the "Known Issues" documentation
+4. Submit an issue on GitHub with the diagnostic report attached (excluding any personal information)
 
 ## Recent Updates
+
+### Version 0.4.0 (2024-06-28)
+- Introduced automatic update system with secure download and installation
+- Added background update checking with user notifications
+- Implemented SHA256 checksum verification for update integrity
+- Added update deferral tracking with escalating notifications
+- Enhanced system tray menu with update options
+- Improved error handling for download and verification failures
+- Added comprehensive update testing framework
+- See [RELEASE_NOTES_v0.4.0.md](docs/RELEASE_NOTES_v0.4.0.md) for details
+
+### Version 0.3.0 (2024-06-11)
+  - Released on GitHub at https://github.com/Aycrith/DAOCSprintManager
+  - Added comprehensive performance testing framework
+  - Improved system tray icon handling
+  - Enhanced stability and error recovery
+  - Complete release notes available in the GitHub release
 
 - **v0.3.0-pre (2024-06-11)**: Fixed system tray icon creation issue. The application now properly handles icon sizing parameters from settings.
 

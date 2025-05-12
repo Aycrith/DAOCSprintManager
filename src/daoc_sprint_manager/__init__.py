@@ -1,10 +1,9 @@
 """
 DAOC Sprint Manager package.
 
-Automates sprint key management for Dark Age of Camelot by detecting 
-sprint icon status and sending keyboard input.
+Python package for managing sprint keys in Dark Age of Camelot.
 
-Version: 0.1.0
+Version: 0.4.0
 """
 
-__version__ = "0.1.0" 
+__version__ = "0.4.0" 

@@ -1,71 +1,83 @@
-# Progress Log
+# DAOC Sprint Manager Progress
 
-## May 11, 2025 - v0.3.0 Release Package Preparation
-- ✅ Completed comprehensive performance testing framework implementation
-- ✅ Updated all documentation for v0.3.0 release
-- ✅ Successfully built release package (DAOCSprintManager_v0.3.0.zip)
-- ✅ Verified build contents and distribution archive
-- 📝 Next steps: Final testing of distribution package and release preparation
+## Completed Features
 
-## Current Development Focus: Comprehensive Testing & Release Preparation (v0.3.0)
+### Core Functionality
+- ✅ Window detection and capture system
+- ✅ Template-based sprint icon detection
+- ✅ Performance monitoring and resource usage tracking
+- ✅ Input management for key simulation
+- ✅ Configurable polling rates and detection thresholds
 
-### System Tray UI Fixes - Completed
+### User Interface
+- ✅ System tray application with status updates
+- ✅ Configuration GUI with settings management
+- ✅ Profile management system
+- ✅ Performance statistics window
+- ✅ "Start minimized to tray" functionality
+- ✅ Export diagnostic reports feature
 
-- **Fixed System Tray Icon Creation Issue:**
-  - Resolved a bug in the `_create_icon` method of the `SystemTrayUI` class.
-  - Fixed incorrect variable reference where `size` was used instead of `width` and `height`.
-  - Ensured proper icon sizing from the application settings.
-  - Improved code quality with better docstrings and type hints.
-  - Verified functionality by running the application in test mode.
+### Testing & Quality
+- ✅ Comprehensive unit test suite (>84% coverage)
+- ✅ Integration tests for core components
+- ✅ Mock system for testing without game dependency
+- ✅ Fixed error handling edge cases
+- ✅ Implemented proper test environment isolation
 
-### Performance Testing (Task 6.3) - In Progress
+### Auto-Update System (v0.4.0) - READY FOR RELEASE
+- ✅ Implemented UpdateManager for handling application updates
+- ✅ Added secure download with SHA256 checksum verification
+- ✅ Created batch-based update application process
+- ✅ Integrated update notifications in system tray
+- ✅ Added background update checking
+- ✅ Implemented comprehensive unit tests
+- ✅ Added end-to-end testing framework and test scripts
+- ✅ Updated all documentation for auto-update feature
+- ✅ Built v0.4.0 package (executable + dependencies)
+- ✅ Generated SHA256 checksum for distribution package
+- ✅ Finalized release notes and changelog
+- ✅ Ready for GitHub release
 
-- **Performance Test Plan Created:**
-  - Comprehensive test plan documented in `testing/performance_test_plan.md`.
-  - Defined clear objectives, success criteria, and test scenarios.
-  - Established metrics collection strategy using `performance_monitor.py`.
-  - Created structured approach for baseline, long-duration, and stress testing.
+## Known Issues
 
-- **Performance Test Implementation Started:**
-  - Created `testing/performance_test_runner.py` for automated test execution.
-  - Implemented support for three primary test scenarios:
-    - Baseline Performance Test (30 minutes)
-    - Long-Duration Stability Test (4 hours)
-    - High FPS Stress Test (1 hour)
-  - Added robust logging, metrics collection, and results storage.
-  - Integrated with existing `performance_monitor.py`.
+1. Some dependencies have deprecation warnings (Pydantic datetime.utcnow())
+2. Tkinter may not be available in all environments, needing better fallback behavior
+3. Additional edge case handling needed for multi-window scenarios
 
-**Next Steps in Performance Testing:**
-1. Execute baseline performance tests.
-2. Collect and analyze initial metrics.
-3. Implement additional test scenarios if needed.
-4. Document performance baselines.
+## Next Steps
 
-### Integration Testing (Task 6.2) - Completed
+1. Complete remaining UI customization options
+2. Further improve test coverage for edge cases
+3. Create user documentation and quick-start guide
+4. Package application for end-user distribution
 
-- **Detection Workflow Integration Tests (`tests/integration/test_detection_flow.py`):**
-  - A comprehensive integration test suite has been created and verified.
-  - These tests validate the end-to-end detection workflow, from simulated window capture through icon detection to mock input actions.
-  - Key aspects covered: component interactions, data flow, temporal consistency in an integrated environment, and error handling.
-  - The suite uses a `MockWindowManager` to provide test images and a `MockInputManager` to verify actions, allowing the core `IconDetector` and `SprintManagerApp` logic to interact with minimal internal mocking.
+## Current Development Focus: v0.5.0 - User Experience & Diagnostics
 
-### Module Unit/Integration Testing (Task 6.2) - Completed
+### User Customization Options (Task 8.3.1) - Completed
 
-- **Core Logic Modules Fully Tested (>90% coverage for these components):**
-  - `IconDetector`, `InputManager`, `WindowManager`.
-- **Key UI Components Tested:**
-  - `ConfigGUI`, `SprintManagerApp` (TrayApp).
-- **Testing Infrastructure:**
-  - Performance Monitor (`testing/performance_monitor.py`) functional and tested.
-  - Test runner (`run_tests.py`) correctly configured for `pytest` and `pytest-cov`, targeting `src` for coverage.
+- "Start Minimized to Tray" option implemented to allow users to launch the app directly to the system tray.
+- Configuration options added in `AppSettings` model, config template, and `ConfigGUI`.
+- `SystemTrayUI` enhanced to respect this setting at startup.
+- All components correctly initialized based on user preferences.
 
-**Overall Status:** With Task 6.2 completed and Task 6.3 now in progress, the focus is on establishing performance baselines and ensuring the application meets its performance requirements. The comprehensive test plan and automated test runner provide a solid foundation for this phase.
+### UI Performance Statistics Display (Task 8.1) - Completed with Tests
 
-**Next Steps in Testing & Release Prep:**
+- `PerformanceStatsWindow` implemented for real-time metrics.
+- `SprintManagerApp` enhanced for data tracking and UI launch.
+- **Comprehensive unit tests in `tests/ui/test_performance_stats_window.py` (7 tests) are passing.**
 
-1. Proceed with Task 6.3: Performance Testing.
-2. Finalize all documentation (Task 6.4).
-3. Prepare the release package (Task 6.5).
+### Enhanced Logging and Diagnostics - Log Export (Task 8.2) - Completed with Tests
 
----
-*(Previous content of progress.md follows)*
+- `DiagnosticReportGenerator` created to package logs, system info, and settings into a ZIP.
+- "Export Diagnostic Report" feature integrated into tray menu with UI prompts.
+- **Comprehensive unit tests in `tests/utils/test_diagnostic_report.py` (11 tests) are passing.**
+
+### Recently Completed
+- Auto-update system implementation for v0.4.0 - FINALIZED
+  - End-to-end testing successfully completed for all scenarios
+  - Built and packaged v0.4.0 distribution
+  - SHA256 checksum: 1b4c36729555d0c6221d597f8e634ff1ddb49bf6ff381020689b2bed054b5d95
+  - All documentation updated: CHANGELOG.md, README.md, QUICK_START_GUIDE.md, RELEASE_NOTES
+  - Ready for GitHub release
+
+### In Progress
