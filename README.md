@@ -72,7 +72,17 @@ If you encounter issues with the application:
 
 ## Recent Updates
 
-### Version 0.4.0 (2024-06-28)
+### Version 0.5.0 (2024-05-13)
+- Added Performance Statistics Display for real-time monitoring of system resources
+- Implemented Diagnostic Report Export functionality for troubleshooting
+- Added UI customization options (Start Minimized to Tray, Minimize to Tray instead of Close)
+- Enhanced Auto-Update with periodic background checks and notifications
+- Updated Pydantic models to V2 style validators
+- Improved thread management and resource cleanup
+- See [CHANGELOG.md](CHANGELOG.md) for complete details
+- Download: [DAOC Sprint Manager v0.5.0](https://github.com/Aycrith/DAOCSprintManager/releases/tag/v0.5.0)
+
+### Version 0.4.0 (2024-04-29)
 - Introduced automatic update system with secure download and installation
 - Added background update checking with user notifications
 - Implemented SHA256 checksum verification for update integrity
@@ -80,16 +90,15 @@ If you encounter issues with the application:
 - Enhanced system tray menu with update options
 - Improved error handling for download and verification failures
 - Added comprehensive update testing framework
-- See [RELEASE_NOTES_v0.4.0.md](docs/RELEASE_NOTES_v0.4.0.md) for details
 
-### Version 0.3.0 (2024-06-11)
+### Version 0.3.0 (2024-04-01)
   - Released on GitHub at https://github.com/Aycrith/DAOCSprintManager
   - Added comprehensive performance testing framework
   - Improved system tray icon handling
   - Enhanced stability and error recovery
   - Complete release notes available in the GitHub release
 
-- **v0.3.0-pre (2024-06-11)**: Fixed system tray icon creation issue. The application now properly handles icon sizing parameters from settings.
+- **v0.3.0-pre (2024-04-01)**: Fixed system tray icon creation issue. The application now properly handles icon sizing parameters from settings.
 
 ## Testing & Coverage (Updated 2024-06-05)
 
